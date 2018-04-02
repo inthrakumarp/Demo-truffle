@@ -1,0 +1,406 @@
+{
+  "contractName": "FuncTypesCaller",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "funcTypesAddr",
+          "type": "address"
+        },
+        {
+          "name": "str",
+          "type": "string"
+        }
+      ],
+      "name": "callExternal",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x6060604052341561000f57600080fd5b6102088061001e6000396000f300606060405260043610610041576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806310725fe014610046575b600080fd5b341561005157600080fd5b6100c0600480803573ffffffffffffffffffffffffffffffffffffffff1690602001909190803590602001908201803590602001908080601f016020809104026020016040519081016040528093929190818152602001838380828437820191505050505050919050506100d6565b6040518082815260200191505060405180910390f35b6000808390508073ffffffffffffffffffffffffffffffffffffffff16630d35b473846000604051602001526040518263ffffffff167c01000000000000000000000000000000000000000000000000000000000281526004018080602001828103825283818151815260200191508051906020019080838360005b8381101561016d578082015181840152602081019050610152565b50505050905090810190601f16801561019a5780820380516001836020036101000a031916815260200191505b5092505050602060405180830381600087803b15156101b857600080fd5b6102c65a03f115156101c957600080fd5b50505060405180519050915050929150505600a165627a7a72305820f71d7844c396a63adf2dbb012d0998516c0828b45e5597d936d23e21097e1a690029",
+  "deployedBytecode": "0x606060405260043610610041576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806310725fe014610046575b600080fd5b341561005157600080fd5b6100c0600480803573ffffffffffffffffffffffffffffffffffffffff1690602001909190803590602001908201803590602001908080601f016020809104026020016040519081016040528093929190818152602001838380828437820191505050505050919050506100d6565b6040518082815260200191505060405180910390f35b6000808390508073ffffffffffffffffffffffffffffffffffffffff16630d35b473846000604051602001526040518263ffffffff167c01000000000000000000000000000000000000000000000000000000000281526004018080602001828103825283818151815260200191508051906020019080838360005b8381101561016d578082015181840152602081019050610152565b50505050905090810190601f16801561019a5780820380516001836020036101000a031916815260200191505b5092505050602060405180830381600087803b15156101b857600080fd5b6102c65a03f115156101c957600080fd5b50505060405180519050915050929150505600a165627a7a72305820f71d7844c396a63adf2dbb012d0998516c0828b45e5597d936d23e21097e1a690029",
+  "sourceMap": "56:222:1:-;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "56:222:1:-;;;;;;;;;;;;;;;;;;;;;;;;88:187;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;160:4;176:19;208:13;176:46;;240:9;:22;;;263:3;240:27;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:2;8:100;;;99:1;94:3;90;84:5;80:1;75:3;71;64:6;52:2;49:1;45:3;40:15;;8:100;;;12:14;3:109;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;233:34:1;;88:187;;;;;:::o",
+  "source": "pragma solidity ^0.4.4;\r\n\r\nimport \"./FuncTypes.sol\";\r\n\r\ncontract FuncTypesCaller {\r\n    function callExternal(address funcTypesAddr, string str) public returns(uint){\r\n        FuncTypes funcTypes = FuncTypes(funcTypesAddr);\r\n        return funcTypes.indirectCall(str);\r\n    }\r\n}",
+  "sourcePath": "C:\\inthra\\blockChain\\Demo-truffle\\contracts\\FuncTypesCaller.sol",
+  "ast": {
+    "attributes": {
+      "absolutePath": "/C/inthra/blockChain/Demo-truffle/contracts/FuncTypesCaller.sol",
+      "exportedSymbols": {
+        "FuncTypesCaller": [
+          74
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "^",
+            "0.4",
+            ".4"
+          ]
+        },
+        "id": 51,
+        "name": "PragmaDirective",
+        "src": "0:23:1"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 50,
+          "absolutePath": "/C/inthra/blockChain/Demo-truffle/contracts/FuncTypes.sol",
+          "file": "./FuncTypes.sol",
+          "scope": 75,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 52,
+        "name": "ImportDirective",
+        "src": "27:25:1"
+      },
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            74
+          ],
+          "name": "FuncTypesCaller",
+          "scope": 75
+        },
+        "children": [
+          {
+            "attributes": {
+              "constant": false,
+              "implemented": true,
+              "isConstructor": false,
+              "modifiers": [
+                null
+              ],
+              "name": "callExternal",
+              "payable": false,
+              "scope": 74,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "funcTypesAddr",
+                      "scope": 73,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "type": "address"
+                        },
+                        "id": 53,
+                        "name": "ElementaryTypeName",
+                        "src": "110:7:1"
+                      }
+                    ],
+                    "id": 54,
+                    "name": "VariableDeclaration",
+                    "src": "110:21:1"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "str",
+                      "scope": 73,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "string memory",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string storage pointer"
+                        },
+                        "id": 55,
+                        "name": "ElementaryTypeName",
+                        "src": "133:6:1"
+                      }
+                    ],
+                    "id": 56,
+                    "name": "VariableDeclaration",
+                    "src": "133:10:1"
+                  }
+                ],
+                "id": 57,
+                "name": "ParameterList",
+                "src": "109:35:1"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 73,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 58,
+                        "name": "ElementaryTypeName",
+                        "src": "160:4:1"
+                      }
+                    ],
+                    "id": 59,
+                    "name": "VariableDeclaration",
+                    "src": "160:4:1"
+                  }
+                ],
+                "id": 60,
+                "name": "ParameterList",
+                "src": "159:6:1"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "assignments": [
+                        62
+                      ]
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "constant": false,
+                          "name": "funcTypes",
+                          "scope": 73,
+                          "stateVariable": false,
+                          "storageLocation": "default",
+                          "type": "contract FuncTypes",
+                          "value": null,
+                          "visibility": "internal"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "contractScope": null,
+                              "name": "FuncTypes",
+                              "referencedDeclaration": 49,
+                              "type": "contract FuncTypes"
+                            },
+                            "id": 61,
+                            "name": "UserDefinedTypeName",
+                            "src": "176:9:1"
+                          }
+                        ],
+                        "id": 62,
+                        "name": "VariableDeclaration",
+                        "src": "176:19:1"
+                      },
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "contract FuncTypes",
+                          "type_conversion": true
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_address",
+                                  "typeString": "address"
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 49,
+                              "type": "type(contract FuncTypes)",
+                              "value": "FuncTypes"
+                            },
+                            "id": 63,
+                            "name": "Identifier",
+                            "src": "198:9:1"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 54,
+                              "type": "address",
+                              "value": "funcTypesAddr"
+                            },
+                            "id": 64,
+                            "name": "Identifier",
+                            "src": "208:13:1"
+                          }
+                        ],
+                        "id": 65,
+                        "name": "FunctionCall",
+                        "src": "198:24:1"
+                      }
+                    ],
+                    "id": 66,
+                    "name": "VariableDeclarationStatement",
+                    "src": "176:46:1"
+                  },
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 60
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "uint256",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_string_memory_ptr",
+                                  "typeString": "string memory"
+                                }
+                              ],
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "indirectCall",
+                              "referencedDeclaration": 48,
+                              "type": "function (string memory) external returns (uint256)"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 62,
+                                  "type": "contract FuncTypes",
+                                  "value": "funcTypes"
+                                },
+                                "id": 67,
+                                "name": "Identifier",
+                                "src": "240:9:1"
+                              }
+                            ],
+                            "id": 68,
+                            "name": "MemberAccess",
+                            "src": "240:22:1"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 56,
+                              "type": "string memory",
+                              "value": "str"
+                            },
+                            "id": 69,
+                            "name": "Identifier",
+                            "src": "263:3:1"
+                          }
+                        ],
+                        "id": 70,
+                        "name": "FunctionCall",
+                        "src": "240:27:1"
+                      }
+                    ],
+                    "id": 71,
+                    "name": "Return",
+                    "src": "233:34:1"
+                  }
+                ],
+                "id": 72,
+                "name": "Block",
+                "src": "165:110:1"
+              }
+            ],
+            "id": 73,
+            "name": "FunctionDefinition",
+            "src": "88:187:1"
+          }
+        ],
+        "id": 74,
+        "name": "ContractDefinition",
+        "src": "56:222:1"
+      }
+    ],
+    "id": 75,
+    "name": "SourceUnit",
+    "src": "0:278:1"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.19+commit.c4cbbb05.Emscripten.clang"
+  },
+  "networks": {
+    "5777": {
+      "events": {},
+      "links": {},
+      "address": "0xf12b5dd4ead5f743c6baa640b0216200e89b60da"
+    }
+  },
+  "schemaVersion": "1.0.1",
+  "updatedAt": "2018-03-14T22:18:19.391Z"
+}
